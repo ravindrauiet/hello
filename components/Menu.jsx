@@ -1,6 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import { BsChevronDown } from "react-icons/bs";
+import React from "react"; 
+import Link from "next/link"; 
+import { BsChevronDown } from "react-icons/bs"; 
+
 
 const data = [
     { id: 1, name: "Home", url: "/" },
@@ -15,6 +16,7 @@ const subMenuData = [
     { id: 3, name: "Running shoes", doc_count: 64 },
     { id: 4, name: "Football shoes", doc_count: 107 },
 ];
+
 
 const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
     return (
@@ -33,12 +35,12 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
 
                                 {showCatMenu && (
                                     <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
-                                        {categories?.map(
-                                            ({ attributes: c, id }) => {
+                                        {subMenuData.map(
+                                            (submenu) => {
                                                 return (
                                                     <Link
-                                                        key={id}
-                                                        href={`/category/${c.slug}`}
+                                                        key={submenu.id}
+                                                        href="/"
                                                         onClick={() =>
                                                             setShowCatMenu(
                                                                 false
@@ -46,9 +48,9 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                                                         }
                                                     >
                                                         <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
-                                                            {c.name}
+                                                            {submenu.name}
                                                             <span className="opacity-50 text-sm">
-                                                                {`(${c.products.data.length})`}
+                                                                78
                                                             </span>
                                                         </li>
                                                     </Link>
