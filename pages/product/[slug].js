@@ -85,11 +85,10 @@ const ProductDetails = () => {
                             {/* SIZE END */}
 
                             {/* SHOW ERROR START */}
-                            {showError && (
-                                <div className="text-red-600 mt-1">
-                                    Size selection is required
-                                </div>
-                            )}
+                        
+                            <div className="text-red-600 mt-1">
+                                Size selection is required
+                            </div>
                             {/* SHOW ERROR END */}
                         </div>
                         {/* PRODUCT SIZE RANGE END */}

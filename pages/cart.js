@@ -12,8 +12,6 @@ const Cart = () => {
     return (
         <div className="w-full md:py-20">
             <Wrapper>
-                {cartItems.length > 0 && (
-                    <>
                         {/* HEADING AND PARAGRAPH START */}
                         <div className="text-center max-w-[800px] mx-auto mt-8 md:mt-0">
                             <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
@@ -69,8 +67,6 @@ const Cart = () => {
                             {/* SUMMARY END */}
                         </div>
                         {/* CART CONTENT END */}
-                    </>
-                )}
 
                 {/* This is empty screen */}
                     {/* <div className="flex-[2] flex flex-col items-center pb-[50px] md:-mt-14">
