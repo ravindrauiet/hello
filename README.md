@@ -1,3 +1,44 @@
+# Totality Corp Frontend Challenge
+Welcome to my Totality Corp Frontend Challenge submission! In this repository, you will find the code and details of the e-commerce website I developed as per the challenge requirements.
+
+## Table of Contents
+- Challenge Overview
+- Tech Stack
+- Features
+- Additional Challenges
+- Demo
+- Installation
+- Usage
+- Screenshots
+
+## Challenge Overview
+
+The Totality Corp Frontend Challenge required the development of an intermediate-level e-commerce website using React or a similar frontend framework/library. The website replicates a shopping site with essential features, including product listing, cart management, and checkout.
+
+## Tech Stack
+###  Frontend Framework: Next Js 
+### UI Library: Material-UI
+### State Management: Next js Context API
+### Responsive Design: Tailwind CSS and Media Queries
+
+
+## ScreenShot
+
+### Home 
+![Screenshot (45)](https://github.com/ravindrauiet/totalitycorp-frontend-challenge/assets/98412688/cf7a3801-fbad-4136-bcf1-c5027538b9f8)
+![Screenshot (46)](https://github.com/ravindrauiet/totalitycorp-frontend-challenge/assets/98412688/1d847b0e-2ad8-4225-8ad2-b04192868c0a)
+
+### Footer 
+![Screenshot (47)](https://github.com/ravindrauiet/totalitycorp-frontend-challenge/assets/98412688/f846cf21-c5e0-486c-ad3b-cf4b3f2a67cf)
+
+### Catgories
+![Screenshot (48)](https://github.com/ravindrauiet/totalitycorp-frontend-challenge/assets/98412688/0625b185-b674-4fbf-b6d3-35a3c5856c0a)
+
+### Cart
+![Screenshot (50)](https://github.com/ravindrauiet/totalitycorp-frontend-challenge/assets/98412688/888b7393-edec-4ae7-93c0-b2060635dfb0)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
