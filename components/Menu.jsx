@@ -35,12 +35,12 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
 
                                 {showCatMenu && (
                                     <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
-                                        {subMenuData.map(
-                                            (submenu) => {
+                                        {categories?.map(
+                                            ({ attributes: c, id }) => {
                                                 return (
                                                     <Link
-                                                        key={submenu.id}
-                                                        href="/"
+                                                        key={id}
+                                                        href={`/category/${c.slug}`}
                                                         onClick={() =>
                                                             setShowCatMenu(
                                                                 false
@@ -48,9 +48,9 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                                                         }
                                                     >
                                                         <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
-                                                            {submenu.name}
+                                                            {c.name}
                                                             <span className="opacity-50 text-sm">
-                                                                78
+                                                                {`(${c.products.data.length})`}
                                                             </span>
                                                         </li>
                                                     </Link>

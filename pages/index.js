@@ -1,10 +1,25 @@
 import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
 import Wrapper from "@/components/Wrapper";
-export default function Home() {
+import { fetchDataFromApi } from "@/utils/api";
+import { useEffect, useState } from "react";
+export default function Home({ products }) {
+
+    // const [data , setData] = useState(null);
+    // useEffect(() => {
+    //     fetchProduct();
+    // }, []);
+    
+    // const fetchProduct = async () => {
+    //     const { data } = await fetchDataFromApi("/api/products");
+    //     setData(data);
+    // }
+
     return (
         <main>
             <HeroBanner />
+            {/* <h1> {data?.[0]?.attributes.name} </h1> */}
+            {/* <h1> {products?.data?.[0]?.attributes.name} </h1> */}
             <Wrapper>
                 {/* heading and paragaph start */}
                 <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px]">
@@ -21,9 +36,10 @@ export default function Home() {
 
                 {/* products grid start */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-14 px-5 md:px-0">
-                    {/* {products?.data?.map((product) => (
+                    {products?.data?.map((product) => (
                         <ProductCard key={product?.id} data={product} />
-                    ))} */}
+                    ))}
+                    {/* <ProductCard />
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
@@ -31,11 +47,20 @@ export default function Home() {
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                    <ProductCard /> */}
                 </div>
                 {/* products grid end */}
             </Wrapper>
         </main>
     );
+}
+
+// api fetching in nextjs 
+
+export async function getStaticProps() {
+    const products = await fetchDataFromApi("/api/products?populate=*");
+
+    return {
+        props: { products },
+    };
 }
